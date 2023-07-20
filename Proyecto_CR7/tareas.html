@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aplicación Web</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Usuarios</a></li>
+                <li><a href="tareas.html">Tareas</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="tareas">
+            <h2>Apartado de Tareas</h2>
+            <form id="agregarTareaForm">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" required>
+
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" required>
+
+                <label for="fechaLimite">Fecha Límite:</label>
+                <input type="date" id="fechaLimite" required>
+
+                <button type="submit">Agregar Tarea</button>
+            </form>
+            <ul id="listaTareas"></ul>
+        </section>
+    </main>
+
+    <!-- Modal de edición de tarea -->
+    <div id="modalEditarTarea" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModalEditarTarea()">&times;</span>
+            <h3>Editar Tarea</h3>
+            <form id="formularioEditarTarea" onsubmit="event.preventDefault(); guardarCambiosTarea()">
+                <label for="tituloEditar">Título:</label>
+                <input type="text" id="tituloEditar" required>
+
+                <label for="descripcionEditar">Descripción:</label>
+                <input type="text" id="descripcionEditar" required>
+
+                <label for="fechaLimiteEditar">Fecha Límite:</label>
+                <input type="date" id="fechaLimiteEditar" required>
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación de eliminación de tarea -->
+    <div id="modalConfirmacionEliminarTarea" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModalConfirmacionEliminarTarea()">&times;</span>
+            <h3>Confirmar Eliminación</h3>
+            <p>¿Estás seguro de que deseas eliminar esta tarea?</p>
+            <div>
+                <button id="confirmarEliminarTarea">Eliminar</button>
+                <button onclick="cerrarModalConfirmacionEliminarTarea()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aplicación Web - Productos</title>
+    <link rel="stylesheet" type="text/css" href="styles3.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Usuarios</a></li>
+                <li><a href="tareas.html">Tareas</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="productos">
+            <h2>Apartado de Productos que hacen falta en Bodega</h2>
+            <form id="agregarProductoForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" required></textarea>
+
+
+                <button type="submit">Agregar Producto</button>
+            </form>
+            <ul id="listaProductos"></ul>
+        </section>
+    </main>
+
+    <!-- Modal de edición de producto -->
+    <div id="modalEditarProducto" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModalEditarProducto()">&times;</span>
+            <h3>Editar Producto</h3>
+            <form id="formularioEditarProducto" onsubmit="event.preventDefault(); guardarCambiosProducto()">
+                <label for="nombreEditar">Nombre:</label>
+                <input type="text" id="nombreEditar" required>
+
+                <label for="descripcionEditar">Descripción:</label>
+                <textarea id="descripcionEditar" required></textarea>
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación de eliminación de producto -->
+    <div id="modalConfirmacionEliminarProducto" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModalConfirmacionEliminarProducto()">&times;</span>
+            <h3>Confirmar Eliminación</h3>
+            <p>¿Estás seguro de que deseas eliminar este producto?</p>
+            <div>
+                <button id="confirmarEliminarProducto">Eliminar</button>
+                <button onclick="cerrarModalConfirmacionEliminarProducto()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+
+</html>

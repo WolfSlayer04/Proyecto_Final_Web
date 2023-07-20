@@ -1,0 +1,171 @@
+/* Estilos ciberpunk para la aplicación web */
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #222;
+    color: #fff;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #f92472;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+ul li strong {
+    color: #f92472;
+}
+
+ul li button {
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #222;
+    margin: 10% auto;
+    padding: 20px;
+    border: none;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f92472;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Estilos específicos para los productos */
+
+#listaProductos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.producto-card {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.producto-card h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.producto-card p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.producto-card button {
+    padding: 5px 10px;
+    background-color: #f92472;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
